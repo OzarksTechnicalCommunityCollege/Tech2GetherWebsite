@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/Tech2Gether_api.props" />
+</Project>
