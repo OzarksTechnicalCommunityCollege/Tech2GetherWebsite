@@ -1,4 +1,4 @@
-# Contributing to [Club Name] Website
+# Contributing to Tech2Gether Website
 
 ## Getting Started
 
@@ -26,4 +26,4 @@
 
 ## Questions?
 
-Reach out to club officers on [Discord/Slack/etc.]
+Reach out to club officers on in the CIS Discord.
