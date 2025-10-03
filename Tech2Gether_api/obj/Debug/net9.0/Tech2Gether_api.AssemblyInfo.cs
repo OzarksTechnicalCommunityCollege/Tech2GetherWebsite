@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tech2Gether_api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0bf4a30b18532068a6f982e1225e7de03a3f7401")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79f19dcb7256e7033d3a5eadf29c8d8a1d46b23d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tech2Gether_api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tech2Gether_api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
