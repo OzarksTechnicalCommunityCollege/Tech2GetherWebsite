@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jacksonlewis/Source/repos/Tech2Gether Website/Tech2Gether_website/Tech2Gether_website.csproj": {}
+    "/Users/jacksonlewis/Source/repos/Tech2GetherWebsite/Tech2Gether_website/Tech2Gether_website.csproj": {}
   },
   "projects": {
-    "/Users/jacksonlewis/Source/repos/Tech2Gether Website/Tech2Gether_website/Tech2Gether_website.csproj": {
+    "/Users/jacksonlewis/Source/repos/Tech2GetherWebsite/Tech2Gether_website/Tech2Gether_website.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jacksonlewis/Source/repos/Tech2Gether Website/Tech2Gether_website/Tech2Gether_website.csproj",
+        "projectUniqueName": "/Users/jacksonlewis/Source/repos/Tech2GetherWebsite/Tech2Gether_website/Tech2Gether_website.csproj",
         "projectName": "Tech2Gether_website",
-        "projectPath": "/Users/jacksonlewis/Source/repos/Tech2Gether Website/Tech2Gether_website/Tech2Gether_website.csproj",
+        "projectPath": "/Users/jacksonlewis/Source/repos/Tech2GetherWebsite/Tech2Gether_website/Tech2Gether_website.csproj",
         "packagesPath": "/Users/jacksonlewis/.nuget/packages/",
-        "outputPath": "/Users/jacksonlewis/Source/repos/Tech2Gether Website/Tech2Gether_website/obj/",
+        "outputPath": "/Users/jacksonlewis/Source/repos/Tech2GetherWebsite/Tech2Gether_website/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/jacksonlewis/.nuget/NuGet/NuGet.Config"
@@ -55,6 +55,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+              "version": "[9.0.3, 9.0.3]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[9.0.3, 9.0.3]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.linux-x64",
+              "version": "[9.0.3, 9.0.3]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -64,6 +78,11 @@
             }
           },
           "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
         }
       }
     }
