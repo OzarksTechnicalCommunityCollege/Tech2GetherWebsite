@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tech2Gether_website")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79f19dcb7256e7033d3a5eadf29c8d8a1d46b23d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e8780f7d42342d6eb056dc39057906b81427e0c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tech2Gether_website")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tech2Gether_website")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

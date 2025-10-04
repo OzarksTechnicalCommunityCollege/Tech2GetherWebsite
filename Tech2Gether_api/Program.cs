@@ -7,10 +7,25 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
+// Add environment variables to configuration
+builder.Configuration.AddEnvironmentVariables();
 
+// Set Database Connection String based on environment
+string databaseConnectionString;
 
-// Set Database Connection String
-var databaseConnectionString = builder.Configuration["Connection"];
+if (builder.Environment.IsDevelopment())
+{
+    // Development: Use local configuration (from appsettings.Development.json or user secrets)
+    databaseConnectionString = builder.Configuration["Connection"] 
+        ?? builder.Configuration.GetConnectionString("DefaultConnection")
+        ?? throw new InvalidOperationException("Database connection string not found in development configuration.");
+}
+else
+{
+    // Production/Release: Use environment variables
+    databaseConnectionString = builder.Configuration.GetConnectionString("DefaultConnection")
+        ?? throw new InvalidOperationException("Database connection string 'DefaultConnection' not found in environment variables.");
+}
 
 // Services
 builder.Services.AddControllers();

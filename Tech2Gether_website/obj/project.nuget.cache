@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mn2W4GHPneU=",
+  "dgSpecHash": "5qjGA4+T6Sk=",
   "success": true,
   "projectFilePath": "/Users/jacksonlewis/Source/repos/Tech2GetherWebsite/Tech2Gether_website/Tech2Gether_website.csproj",
-  "expectedPackageFiles": [
-    "/Users/jacksonlewis/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/9.0.3/microsoft.netcore.app.runtime.linux-x64.9.0.3.nupkg.sha512",
-    "/Users/jacksonlewis/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/9.0.3/microsoft.aspnetcore.app.runtime.linux-x64.9.0.3.nupkg.sha512",
-    "/Users/jacksonlewis/.nuget/packages/microsoft.netcore.app.host.linux-x64/9.0.3/microsoft.netcore.app.host.linux-x64.9.0.3.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

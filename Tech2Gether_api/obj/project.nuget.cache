@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xHSwcUdH3Ck=",
+  "dgSpecHash": "KPUIESgpjgI=",
   "success": true,
   "projectFilePath": "/Users/jacksonlewis/Source/repos/Tech2GetherWebsite/Tech2Gether_api/Tech2Gether_api.csproj",
   "expectedPackageFiles": [
@@ -34,15 +34,7 @@
     "/Users/jacksonlewis/.nuget/packages/mysql.entityframeworkcore/9.0.6/mysql.entityframeworkcore.9.0.6.nupkg.sha512",
     "/Users/jacksonlewis/.nuget/packages/mysqlconnector/2.4.0/mysqlconnector.2.4.0.nupkg.sha512",
     "/Users/jacksonlewis/.nuget/packages/pomelo.entityframeworkcore.mysql/9.0.0/pomelo.entityframeworkcore.mysql.9.0.0.nupkg.sha512",
-    "/Users/jacksonlewis/.nuget/packages/runtime.any.system.io/4.3.0/runtime.any.system.io.4.3.0.nupkg.sha512",
-    "/Users/jacksonlewis/.nuget/packages/runtime.any.system.reflection/4.3.0/runtime.any.system.reflection.4.3.0.nupkg.sha512",
-    "/Users/jacksonlewis/.nuget/packages/runtime.any.system.reflection.primitives/4.3.0/runtime.any.system.reflection.primitives.4.3.0.nupkg.sha512",
-    "/Users/jacksonlewis/.nuget/packages/runtime.any.system.runtime/4.3.0/runtime.any.system.runtime.4.3.0.nupkg.sha512",
-    "/Users/jacksonlewis/.nuget/packages/runtime.any.system.text.encoding/4.3.0/runtime.any.system.text.encoding.4.3.0.nupkg.sha512",
-    "/Users/jacksonlewis/.nuget/packages/runtime.any.system.threading.tasks/4.3.0/runtime.any.system.threading.tasks.4.3.0.nupkg.sha512",
-    "/Users/jacksonlewis/.nuget/packages/runtime.native.system/4.3.0/runtime.native.system.4.3.0.nupkg.sha512",
     "/Users/jacksonlewis/.nuget/packages/runtime.native.system.data.sqlclient.sni/4.7.0/runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
-    "/Users/jacksonlewis/.nuget/packages/runtime.unix.system.private.uri/4.3.0/runtime.unix.system.private.uri.4.3.0.nupkg.sha512",
     "/Users/jacksonlewis/.nuget/packages/runtime.win-arm64.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "/Users/jacksonlewis/.nuget/packages/runtime.win-x64.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "/Users/jacksonlewis/.nuget/packages/runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
@@ -59,7 +51,6 @@
     "/Users/jacksonlewis/.nuget/packages/system.diagnostics.eventlog/8.0.0/system.diagnostics.eventlog.8.0.0.nupkg.sha512",
     "/Users/jacksonlewis/.nuget/packages/system.io/4.3.0/system.io.4.3.0.nupkg.sha512",
     "/Users/jacksonlewis/.nuget/packages/system.io.pipelines/6.0.3/system.io.pipelines.6.0.3.nupkg.sha512",
-    "/Users/jacksonlewis/.nuget/packages/system.private.uri/4.3.0/system.private.uri.4.3.0.nupkg.sha512",
     "/Users/jacksonlewis/.nuget/packages/system.reflection/4.3.0/system.reflection.4.3.0.nupkg.sha512",
     "/Users/jacksonlewis/.nuget/packages/system.reflection.primitives/4.3.0/system.reflection.primitives.4.3.0.nupkg.sha512",
     "/Users/jacksonlewis/.nuget/packages/system.runtime/4.3.0/system.runtime.4.3.0.nupkg.sha512",
@@ -75,10 +66,7 @@
     "/Users/jacksonlewis/.nuget/packages/system.threading.tasks/4.3.0/system.threading.tasks.4.3.0.nupkg.sha512",
     "/Users/jacksonlewis/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "/Users/jacksonlewis/.nuget/packages/system.windows.extensions/8.0.0/system.windows.extensions.8.0.0.nupkg.sha512",
-    "/Users/jacksonlewis/.nuget/packages/zstdsharp.port/0.8.5/zstdsharp.port.0.8.5.nupkg.sha512",
-    "/Users/jacksonlewis/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/9.0.3/microsoft.netcore.app.runtime.linux-x64.9.0.3.nupkg.sha512",
-    "/Users/jacksonlewis/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/9.0.3/microsoft.aspnetcore.app.runtime.linux-x64.9.0.3.nupkg.sha512",
-    "/Users/jacksonlewis/.nuget/packages/microsoft.netcore.app.host.linux-x64/9.0.3/microsoft.netcore.app.host.linux-x64.9.0.3.nupkg.sha512"
+    "/Users/jacksonlewis/.nuget/packages/zstdsharp.port/0.8.5/zstdsharp.port.0.8.5.nupkg.sha512"
   ],
   "logs": []
 }
