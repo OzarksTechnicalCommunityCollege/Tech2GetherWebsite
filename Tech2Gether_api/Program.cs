@@ -1,5 +1,6 @@
 using Tech2Gether_api.Data;
 using Microsoft.EntityFrameworkCore;
+using ClubWebsite.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +17,7 @@ string databaseConnectionString;
 if (builder.Environment.IsDevelopment())
 {
     // Development: Use local configuration (from appsettings.Development.json or user secrets)
-    databaseConnectionString = builder.Configuration["Connection"] 
+    databaseConnectionString = builder.Configuration["Connection"]
         ?? builder.Configuration.GetConnectionString("DefaultConnection")
         ?? throw new InvalidOperationException("Database connection string not found in development configuration.");
 }
@@ -59,6 +60,34 @@ app.UseAuthorization();
 
 // Map Controllers
 app.MapControllers();
+
+
+// Check for data seed command
+if (args.Contains("--seed"))
+{
+    using var scope = app.Services.CreateScope();
+    var services = scope.ServiceProvider;
+    
+    try
+    {
+        var context = services.GetRequiredService<T2TContext>();
+        var seeder = new DbSeeder(context);
+        await seeder.SeedAsync();
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"\n❌ An error occurred while seeding the database:");
+        Console.WriteLine($"   {ex.Message}");
+        if (ex.InnerException != null)
+        {
+            Console.WriteLine($"   Inner exception: {ex.InnerException.Message}");
+        }
+        Console.WriteLine("\nMake sure you've run migrations first: dotnet ef database update");
+        return;
+    }
+    
+    return; // Exit after seeding
+}
 
 // Run the app
 app.Run();
