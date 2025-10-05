@@ -1,4 +1,4 @@
-namespace Tech2Gether_website.Models;
+namespace Tech2Gether_client.Models;
 
 public class ErrorViewModel
 {
