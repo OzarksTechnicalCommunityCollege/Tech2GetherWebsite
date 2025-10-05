@@ -1,8 +1,8 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Tech2Gether_website.Models;
+using Tech2Gether_client.Models;
 
-namespace Tech2Gether_website.Controllers;
+namespace Tech2Gether_client.Controllers;
 
 public class HomeController : Controller
 {

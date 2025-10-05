@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: t2t_db
+    environment:
+      MYSQL_ROOT_PASSWORD: DevPassword123!
+      MYSQL_DATABASE: t2t_db
+      MYSQL_USER: club_user
+      MYSQL_PASSWORD: DevPassword123!
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    restart: unless-stopped
+
+volumes:
+  mysql_data:
