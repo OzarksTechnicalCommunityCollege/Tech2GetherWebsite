@@ -18,7 +18,7 @@ namespace Tech2Gether_api.Controllers
         }
 
         // Get: api/users
-        [HttpGet("GetAllUsers", Name = "GeetAllUsers")]
+        [HttpGet("GetAllUsers", Name = "GetAllUsers")]
         public async Task<ActionResult<List<User>>> GetAllUsers()
         {
             return await _context.Users.ToListAsync();
