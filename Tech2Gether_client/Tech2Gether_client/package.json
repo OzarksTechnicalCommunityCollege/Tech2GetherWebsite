@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "npx @tailwindcss/cli -i ./wwwroot/css/tailwind.css -o ./wwwroot/css/site.css --minify",
-    "dev": "npx @tailwindcss/cli -i ./wwwroot/css/tailwind.css -o ./wwwroot/css/site.css --watch"
+    "build": "tailwindcss -i ./wwwroot/css/tailwind.css -o ./wwwroot/css/site.css --minify",
+    "dev": "tailwindcss -i ./wwwroot/css/tailwind.css -o ./wwwroot/css/site.css --watch"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +12,8 @@
   "description": "",
   "dependencies": {
     "tailwindcss": "^4.1.16"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0"
   }
 }
