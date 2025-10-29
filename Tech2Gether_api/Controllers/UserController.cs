@@ -13,17 +13,9 @@ namespace Tech2Gether_api.Controllers
     {
         private readonly IUser repository;
 
-        // Database connection
-        private readonly T2TContext context;
-
-        // variable for config, used for login authentication
-        private IConfiguration config;
-
-        // Constructor
-        public UserController(IConfiguration Config)
+        // Constructor - inject dependencies instead of creating them
+        public UserController(T2TContext context, IConfiguration config)
         {
-            config = Config;
-            context = new T2TContext(config);
             repository = new UserDAL(context, config);
         }
 

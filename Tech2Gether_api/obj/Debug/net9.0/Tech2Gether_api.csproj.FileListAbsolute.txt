@@ -394,7 +394,7 @@ C:\Users\jozai\source\repos\t2t\Tech2GetherWebsite\Tech2Gether_api\obj\Debug\net
 C:\Users\jozai\source\repos\t2t\Tech2GetherWebsite\Tech2Gether_api\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.Tech2Gether_api.props
 C:\Users\jozai\source\repos\t2t\Tech2GetherWebsite\Tech2Gether_api\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.Tech2Gether_api.props
 C:\Users\jozai\source\repos\t2t\Tech2GetherWebsite\Tech2Gether_api\obj\Debug\net9.0\staticwebassets.pack.json
-C:\Users\jozai\source\repos\t2t\Tech2GetherWebsite\Tech2Gether_api\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\jozai\source\repos\t2t\Tech2GetherWebsite\Tech2Gether_api\obj\Debug\net9.0\Tech2Get.72B811FA.Up2Date
 C:\Users\jozai\source\repos\t2t\Tech2GetherWebsite\Tech2Gether_api\obj\Debug\net9.0\Tech2Gether_api.genruntimeconfig.cache
 C:\Users\jozai\source\repos\t2t\Tech2GetherWebsite\Tech2Gether_api\obj\Debug\net9.0\ref\Tech2Gether_api.dll
+C:\Users\jozai\source\repos\t2t\Tech2GetherWebsite\Tech2Gether_api\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
