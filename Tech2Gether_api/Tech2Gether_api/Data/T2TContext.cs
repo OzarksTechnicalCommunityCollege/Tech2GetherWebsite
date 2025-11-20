@@ -6,10 +6,16 @@ namespace Tech2Gether_api.Data;
 
 public class T2TContext : DbContext
 {
+    private readonly IConfiguration _config;
     // Constructor
-    public T2TContext(DbContextOptions<T2TContext> options)
+    public T2TContext(IConfiguration config)
+    {
+        _config = config;
+    }
+    public T2TContext(DbContextOptions<T2TContext> options, IConfiguration config)
             : base(options)
     {
+        _config = config;
     }
 
     // DbSet properties for each table
