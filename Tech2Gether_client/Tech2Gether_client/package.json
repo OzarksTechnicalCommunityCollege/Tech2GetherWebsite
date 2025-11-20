@@ -1,0 +1,19 @@
+{
+  "name": "tech2gether_client",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./wwwroot/css/tailwind.css -o ./wwwroot/css/site.css --minify",
+    "dev": "tailwindcss -i ./wwwroot/css/tailwind.css -o ./wwwroot/css/site.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "tailwindcss": "^4.1.16"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0"
+  }
+}

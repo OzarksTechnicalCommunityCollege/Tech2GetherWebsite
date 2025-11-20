@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/YourProject.csproj",
+                "/p:PublishProfile=site38439-WebDeploy"
+            ]
+        }
+    ]
+}
