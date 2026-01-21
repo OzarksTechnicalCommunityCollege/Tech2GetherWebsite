@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DGG2f2ZFTbE=",
+  "dgSpecHash": "BLpUwpZQM/w=",
   "success": true,
-  "projectFilePath": "C:\\Users\\jozai\\source\\repos\\t2t\\Tech2GetherWebsite\\Tech2Gether_api\\Tech2Gether_api.csproj",
+  "projectFilePath": "D:\\repos\\t2t\\Tech2GetherWebsite\\Tech2Gether_api\\Tech2Gether_api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jozai\\.nuget\\packages\\bouncycastle.cryptography\\2.5.1\\bouncycastle.cryptography.2.5.1.nupkg.sha512",
     "C:\\Users\\jozai\\.nuget\\packages\\entityframework\\6.5.1\\entityframework.6.5.1.nupkg.sha512",

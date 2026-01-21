@@ -58,5 +58,25 @@ namespace Tech2Gether_api.Controllers
             return response;
         }
         #endregion
+
+        #region Register User Method
+        public async Task<RegisterUserResponseModel> RegisterUser(User user)
+        {
+            RegisterUserResponseModel response = new RegisterUserResponseModel();
+            try
+            {
+                response = await repository.RegisterUser(user);
+            }
+            catch (Exception ex)
+            {
+                response.Status = false;
+                response.Message = "Registration Failed";
+                response.StatusCode = 500;
+                //there has been an error
+                Console.WriteLine(ex.Message);
+            }
+            return response;
+        }
+        #endregion 
     }
 }
