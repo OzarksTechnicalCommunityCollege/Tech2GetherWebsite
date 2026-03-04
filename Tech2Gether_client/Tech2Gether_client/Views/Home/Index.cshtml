@@ -1,229 +1,127 @@
-﻿@{
-    ViewData["Title"] = "Tailwind CSS Test Page";
+@{
+    ViewData["Title"] = "Events - Tech2Gether";
+    ViewData["Description"] = "Join Tech2Gether for exciting events and networking opportunities";
 }
 
-<div class="space-y-12">
-    <!-- Page Header -->
-    <div class="text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg p-8">
-        <h1 class="text-4xl font-bold mb-2">Tailwind CSS Test Page</h1>
-        <p class="text-xl opacity-90">Testing all Tailwind CSS components and utilities</p>
-    </div>
+@section Head {
+    <meta name="description" content="Join Tech2Gether for exciting events and networking opportunities" />
+    <meta name="keywords" content="Tech2Gether, Events, Ozarks Tech, Technology, Programming, Networking" />
+    <meta property="og:title" content="Events - Tech2Gether" />
+    <meta property="og:description" content="Participate in Tech2Gether events to connect with fellow tech enthusiasts" />
+    <meta property="og:type" content="website" />
+}
 
-    <!-- Typography Section -->
-    <section class="bg-white rounded-lg shadow-md p-6">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">Typography</h2>
-        <div class="space-y-4">
-            <h1 class="text-6xl font-bold text-gray-900">Heading 1 - 6xl</h1>
-            <h2 class="text-5xl font-semibold text-gray-800">Heading 2 - 5xl</h2>
-            <h3 class="text-4xl font-medium text-gray-700">Heading 3 - 4xl</h3>
-            <h4 class="text-3xl font-normal text-gray-600">Heading 4 - 3xl</h4>
-            <h5 class="text-2xl font-light text-gray-500">Heading 5 - 2xl</h5>
-            <h6 class="text-xl font-thin text-gray-400">Heading 6 - xl</h6>
-            <p class="text-lg text-gray-600 leading-relaxed">
-                This is a paragraph with large text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                <strong class="font-bold">This is bold text</strong> and <em class="italic">this is italic text</em>.
-            </p>
-            <p class="text-base text-gray-600">This is base size text with normal weight.</p>
-            <p class="text-sm text-gray-500">This is small text, often used for captions.</p>
-            <p class="text-xs text-gray-400 uppercase tracking-wider">Extra small uppercase text</p>
-        </div>
-    </section>
+<div class="min-h-screen bg-light-gray">
 
-    <!-- Colors Section -->
-    <section class="bg-white rounded-lg shadow-md p-6">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">Color Palette</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
-            <div class="bg-red-500 text-white p-4 rounded text-center font-semibold">Red</div>
-            <div class="bg-orange-500 text-white p-4 rounded text-center font-semibold">Orange</div>
-            <div class="bg-yellow-500 text-white p-4 rounded text-center font-semibold">Yellow</div>
-            <div class="bg-green-500 text-white p-4 rounded text-center font-semibold">Green</div>
-            <div class="bg-blue-500 text-white p-4 rounded text-center font-semibold">Blue</div>
-            <div class="bg-indigo-500 text-white p-4 rounded text-center font-semibold">Indigo</div>
-            <div class="bg-purple-500 text-white p-4 rounded text-center font-semibold">Purple</div>
-            <div class="bg-pink-500 text-white p-4 rounded text-center font-semibold">Pink</div>
-        </div>
-    </section>
+    {{-- Hero Section --}}
+    <partial name="_Hero" />
 
-    <!-- Buttons Section -->
-    <section class="bg-white rounded-lg shadow-md p-6">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">Buttons</h2>
-        <div class="space-y-6">
-            <div>
-                <h3 class="text-lg font-semibold text-gray-700 mb-3">Basic Buttons</h3>
-                <div class="flex flex-wrap gap-3">
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        Primary
-                    </button>
-                    <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                        Secondary
-                    </button>
-                    <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-                        Success
-                    </button>
-                    <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-                        Danger
-                    </button>
-                </div>
-            </div>
-            <div>
-                <h3 class="text-lg font-semibold text-gray-700 mb-3">Button Sizes</h3>
-                <div class="flex flex-wrap items-center gap-3">
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded text-xs">
-                        Extra Small
-                    </button>
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded text-sm">
-                        Small
-                    </button>
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        Medium
-                    </button>
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded text-lg">
-                        Large
-                    </button>
-                </div>
-            </div>
-            <div>
-                <h3 class="text-lg font-semibold text-gray-700 mb-3">Outline Buttons</h3>
-                <div class="flex flex-wrap gap-3">
-                    <button class="border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white font-bold py-2 px-4 rounded transition-colors">
-                        Primary Outline
-                    </button>
-                    <button class="border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-white font-bold py-2 px-4 rounded transition-colors">
-                        Success Outline
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Forms Section -->
-    <section class="bg-white rounded-lg shadow-md p-6">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">Form Elements</h2>
-        <form class="space-y-6">
-            <div class="grid md:grid-cols-2 gap-6">
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-2">Text Input</label>
-                    <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter text...">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-2">Email Input</label>
-                    <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter email...">
-                </div>
+        {{-- Events Section --}}
+        <div class="mb-20">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6 text-binary-blue">
+                    Upcoming Events
+                </h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                    Join us for exciting events throughout the academic year! From hackathons to cybersecurity competitions, there's something for everyone.
+                </p>
             </div>
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">Select Dropdown</label>
-                <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                    <option>Choose an option</option>
-                    <option>Option 1</option>
-                    <option>Option 2</option>
-                    <option>Option 3</option>
-                </select>
-            </div>
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">Textarea</label>
-                <textarea class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" rows="4" placeholder="Enter your message..."></textarea>
-            </div>
-            <div class="flex items-center">
-                <input type="checkbox" class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
-                <label class="ml-2 block text-sm text-gray-900">I agree to the terms and conditions</label>
-            </div>
-        </form>
-    </section>
 
-    <!-- Cards Section -->
-    <section class="bg-white rounded-lg shadow-md p-6">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">Cards</h2>
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div class="h-48 bg-gradient-to-r from-purple-400 to-pink-400"></div>
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Card Title</h3>
-                    <p class="text-gray-600 mb-4">This is a sample card with some description text.</p>
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        Learn More
-                    </button>
+            {{-- Event Cards Grid --}}
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 max-w-6xl mx-auto">
+
+                {{-- Hack2Gether Hackathon Card --}}
+                <div id="hackathon" class="bg-white rounded-2xl shadow-lg border-t-4 border-t-analog-aquamarine overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+
+                    {{-- Card Header --}}
+                    <div class="p-6 pb-4">
+                        <div class="flex items-center gap-3 mb-4">
+                            <svg class="text-analog-aquamarine w-8 h-8" fill="currentColor" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
+                                {{-- FaCode icon path --}}
+                                <path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/>
+                            </svg>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800">Hack2Gether</h3>
+                                <span class="inline-block bg-analog-aquamarine text-white text-sm font-semibold px-3 py-1 rounded-full mt-1">
+                                    Hackathon Event
+                                </span>
+                            </div>
+                        </div>
+
+                        {{-- Event Details --}}
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <svg class="text-analog-aquamarine w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z"/>
+                                </svg>
+                                <span>April 2026</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <svg class="text-analog-aquamarine w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/>
+                                </svg>
+                                <span>Time TBD</span>
+                            </li>
+                            <li class="flex items-center gap-2 text-gray-600">
+                                <svg class="text-analog-aquamarine w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                                </svg>
+                                <span>Plaster Manufacturing Center, Ozarks Tech Springfield Campus</span>
+                            </li>
+                        </ul>
+
+                        {{-- Description --}}
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Our signature hackathon event is coming in April! Join teams, build innovative projects, and compete for prizes. Perfect for students of all skill levels!
+                        </p>
+
+                        {{-- Status Info --}}
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4 flex items-start gap-2">
+                            <svg class="text-blue-500 w-4 h-4 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+                            </svg>
+                            <p class="text-sm text-blue-700">
+                                <strong>Status:</strong> In the works - More details coming soon!
+                            </p>
+                        </div>
+                    </div>
+
+                    {{-- Card Footer --}}
+                    <div class="px-6 pb-6">
+                        <button class="w-full flex items-center justify-center gap-2 bg-analog-aquamarine text-white font-semibold py-3 px-6 rounded-xl hover:bg-binary-blue transition-colors duration-200 cursor-default">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M156.6 384.9L125.7 354c-8.5-8.5-11.5-20.8-7.7-32.2l14.8-44.9L77.4 97.2c-4.5-11.5-14.7-19.6-27-20.8L5.2 74.3C2.3 74 0 76.3 0 79.2V464c0 26.5 21.5 48 48 48h256l-110.5-110.5c-5.1-5-7.4-11.6-6.9-17.7l-30-15.9z"/>
+                                <path d="M512 128c0-17.7-14.3-32-32-32H44.4c9.5 6.6 16.7 16.3 19.9 27.9l54.1 200.3 22.4-68.1c3.3-9.9 12.5-16.6 22.9-16.6H464c17.7 0 32 14.3 32 32s-14.3 32-32 32H176.3l-16.2 49.2 75.3 75.3L312 379.8c6.2-6.2 14.4-9.8 23.1-9.8H512V128z"/>
+                            </svg>
+                            Stay Tuned for Updates
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div class="h-48 bg-gradient-to-r from-green-400 to-blue-400"></div>
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Another Card</h3>
-                    <p class="text-gray-600 mb-4">This card demonstrates hover effects and transitions.</p>
-                    <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-                        Get Started
-                    </button>
+
+            </div>{{-- end grid --}}
+        </div>{{-- end Events Section --}}
+
+        {{-- Sponsorship Section --}}
+        <div class="bg-gradient-to-br from-blue-100 to-cyan-100 py-16 px-8 rounded-3xl shadow-inner mb-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="flex justify-center mb-6">
+                    {{-- FaTrophy icon --}}
+                    <svg class="text-yaml-yellow w-16 h-16" fill="currentColor" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M400 0H176c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8H24C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9H192c-17.7 0-32 14.3-32 32s14.3 32 32 32h192c17.7 0 32-14.3 32-32s-14.3-32-32-32H373.9C353 448 336 431 336 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C558.5 245 592 180.6 592 88c0-13.3-10.7-24-24-24H446.4c.3-5.2 .5-10.5 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112h84.4c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6h84.4c-5.1 66.3-31.1 111.2-63 142.3z"/>
+                    </svg>
                 </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div class="h-48 bg-gradient-to-r from-yellow-400 to-orange-400"></div>
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Third Card</h3>
-                    <p class="text-gray-600 mb-4">Cards are great for organizing content and information.</p>
-                    <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
-                        Explore
-                    </button>
+                <h2 class="text-4xl font-bold mb-6 text-binary-blue">
+                    Event Sponsorship
+                </h2>
+                <div class="bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 hover:scale-105">
+                    <p class="text-xl text-gray-700 leading-relaxed mb-3 mt-3">
+                        We're looking for sponsors for our upcoming events! In April, we're hosting our first annual Hackathon at Ozarks Tech! All event sponsorships will contribute to running the event and prizes for winning competitors. More information is available on our
+                        <a asp-page="/Sponsors" class="text-analog-aquamarine font-semibold hover:underline">Sponsors</a> page.
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Alerts Section -->
-    <section class="bg-white rounded-lg shadow-md p-6">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">Alerts</h2>
-        <div class="space-y-4">
-            <div class="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded">
-                <strong>Info:</strong> This is an informational alert.
-            </div>
-            <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
-                <strong>Success:</strong> Your action was completed successfully!
-            </div>
-            <div class="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded">
-                <strong>Warning:</strong> Please review this information carefully.
-            </div>
-            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
-                <strong>Error:</strong> Something went wrong. Please try again.
-            </div>
-        </div>
-    </section>
-
-    <!-- Layout & Spacing -->
-    <section class="bg-white rounded-lg shadow-md p-6">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">Layout & Spacing</h2>
-        <div class="space-y-6">
-            <div>
-                <h3 class="text-lg font-semibold text-gray-700 mb-3">Flexbox Layout</h3>
-                <div class="flex justify-between items-center bg-gray-100 p-4 rounded">
-                    <div class="bg-blue-500 text-white p-2 rounded">Item 1</div>
-                    <div class="bg-green-500 text-white p-2 rounded">Item 2</div>
-                    <div class="bg-red-500 text-white p-2 rounded">Item 3</div>
-                </div>
-            </div>
-            <div>
-                <h3 class="text-lg font-semibold text-gray-700 mb-3">Grid Layout</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="bg-purple-500 text-white p-4 rounded text-center">1</div>
-                    <div class="bg-indigo-500 text-white p-4 rounded text-center">2</div>
-                    <div class="bg-blue-500 text-white p-4 rounded text-center">3</div>
-                    <div class="bg-green-500 text-white p-4 rounded text-center">4</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Responsive Design Test -->
-    <section class="bg-white rounded-lg shadow-md p-6">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">Responsive Design</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            <div class="bg-blue-500 text-white p-4 rounded text-center">
-                <p class="font-semibold">Responsive</p>
-                <p class="text-sm opacity-75">1 col on mobile</p>
-                <p class="text-sm opacity-75">2 cols on tablet</p>
-                <p class="text-sm opacity-75">3 cols on desktop</p>
-                <p class="text-sm opacity-75">4 cols on xl</p>
-            </div>
-            <div class="bg-green-500 text-white p-4 rounded text-center">Box 2</div>
-            <div class="bg-purple-500 text-white p-4 rounded text-center">Box 3</div>
-            <div class="bg-orange-500 text-white p-4 rounded text-center">Box 4</div>
-        </div>
-    </section>
-</div>
+    </div>{{-- end container --}}
+</div>{{-- end min-h-screen --}}

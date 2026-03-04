@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/tailwind.css" />
     <link rel="stylesheet" href="~/Tech2Gether_client.styles.css" asp-append-version="true" />
+    @RenderSection("Head", required: false)
 </head>
 <body class="min-h-screen bg-gray-50 flex flex-col">
+    <partial name="_Header" />
     <header class="bg-white shadow-sm border-b border-gray-200">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">

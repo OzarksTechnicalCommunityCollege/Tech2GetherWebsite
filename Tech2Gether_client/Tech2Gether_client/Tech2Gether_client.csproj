@@ -6,6 +6,10 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 	</PropertyGroup>
 
+	<ItemGroup>
+	  <Folder Include="Views\Components\" />
+	</ItemGroup>
+
 	<Target Name="BuildTailwind" BeforeTargets="Build">
 		<Exec Command="npm run build" />
 	</Target>
