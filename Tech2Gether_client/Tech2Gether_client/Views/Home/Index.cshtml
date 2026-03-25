@@ -1,229 +1,85 @@
-﻿@{
-    ViewData["Title"] = "Tailwind CSS Test Page";
+@using Tech2Gether.Models
+@{
+    ViewData["Title"] = "Events - Tech2Gether";
+    ViewData["Description"] = "Join Tech2Gether for exciting events and networking opportunities";  
 }
 
-<div class="space-y-12">
-    <!-- Page Header -->
-    <div class="text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg p-8">
-        <h1 class="text-4xl font-bold mb-2">Tailwind CSS Test Page</h1>
-        <p class="text-xl opacity-90">Testing all Tailwind CSS components and utilities</p>
+@section Head {
+    <meta name="description" content="Join Tech2Gether for exciting events and networking opportunities" />
+    <meta name="keywords" content="Tech2Gether, Events, Ozarks Tech, Technology, Programming, Networking" />
+    <meta property="og:title" content="Events - Tech2Gether" />
+    <meta property="og:description" content="Participate in Tech2Gether events to connect with fellow tech enthusiasts" />
+    <meta property="og:type" content="website" />
+}
+
+<div class="min-h-screen bg-light-gray">
+
+    @* {{-- Hero Section --}} *@
+    <partial name="_Hero" />
+
+
+        @* {{-- Events Section --}} *@
+        <div class="mb-20">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6 text-binary-blue">
+                    Upcoming Events
+                </h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                    Join us for exciting events throughout the academic year! From hackathons to cybersecurity competitions, there's something for everyone.
+                </p>
+            </div>
+
+            @* {{-- Event Cards Grid --}} *@
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16 max-w-6xl mx-auto">
+
+
+                    <partial name="_Card" model='new CardModel {
+                        Id          = "hackathon",
+                        IconSvg     = "<path d=\"M392.8 1.2c-17-4.9...\"/>",
+                        IconViewBox = "0 0 640 512",
+                        IconColor   = "text-analog-aquamarine",
+                        Title       = "Hack2Gether",
+                        Subtitle    = "Hackathon Event",
+                        SubtitleBg  = "bg-analog-aquamarine",
+                        BorderColor = "border-t-analog-aquamarine",
+                        Description = "Our signature hackathon event...",
+                        AdditionalInfo = "<strong>Status:</strong> In the works - More details coming soon!",
+                        AdditionalInfoBg = "bg-blue-50",
+                        Details     = new() {
+                            new() { Text = "April 2026"},
+                        },
+                        Button = new() { Text = "Stay Tuned for Updates", ClassName = "bg-analog-aquamarine text-white hover:bg-binary-blue" }
+                    }' />
+
+                </div>
+
+            </div>
+            @* {{-- end grid --}} *@
+        </div>
+        @* {{-- end Events Section --}} *@
+
+        @* {{-- Sponsorship Section --}} *@
+        <div class="bg-gradient-to-br from-blue-100 to-cyan-100 py-16 px-8 rounded-3xl shadow-inner mb-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="flex justify-center mb-6">
+                    @* {{-- FaTrophy icon --}} *@
+                    <svg class="text-yaml-yellow w-16 h-16" fill="currentColor" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M400 0H176c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8H24C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9H192c-17.7 0-32 14.3-32 32s14.3 32 32 32h192c17.7 0 32-14.3 32-32s-14.3-32-32-32H373.9C353 448 336 431 336 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C558.5 245 592 180.6 592 88c0-13.3-10.7-24-24-24H446.4c.3-5.2 .5-10.5 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112h84.4c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6h84.4c-5.1 66.3-31.1 111.2-63 142.3z"/>
+                    </svg>
+                </div>
+                <h2 class="text-4xl font-bold mb-6 text-binary-blue">
+                    Event Sponsorship
+                </h2>
+                <div class="bg-white rounded-2xl p-8 shadow-lg transition-all duration-300 hover:scale-105">
+                    <p class="text-xl text-gray-700 leading-relaxed mb-3 mt-3">
+                        We're looking for sponsors for our upcoming events! In April, we're hosting our first annual Hackathon at Ozarks Tech! All event sponsorships will contribute to running the event and prizes for winning competitors. More information is available on our
+                        <a asp-page="/Sponsors" class="text-analog-aquamarine font-semibold hover:underline">Sponsors</a> page.
+                    </p>
+                </div>
+            </div>
+        </div>
+
     </div>
-
-    <!-- Typography Section -->
-    <section class="bg-white rounded-lg shadow-md p-6">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">Typography</h2>
-        <div class="space-y-4">
-            <h1 class="text-6xl font-bold text-gray-900">Heading 1 - 6xl</h1>
-            <h2 class="text-5xl font-semibold text-gray-800">Heading 2 - 5xl</h2>
-            <h3 class="text-4xl font-medium text-gray-700">Heading 3 - 4xl</h3>
-            <h4 class="text-3xl font-normal text-gray-600">Heading 4 - 3xl</h4>
-            <h5 class="text-2xl font-light text-gray-500">Heading 5 - 2xl</h5>
-            <h6 class="text-xl font-thin text-gray-400">Heading 6 - xl</h6>
-            <p class="text-lg text-gray-600 leading-relaxed">
-                This is a paragraph with large text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                <strong class="font-bold">This is bold text</strong> and <em class="italic">this is italic text</em>.
-            </p>
-            <p class="text-base text-gray-600">This is base size text with normal weight.</p>
-            <p class="text-sm text-gray-500">This is small text, often used for captions.</p>
-            <p class="text-xs text-gray-400 uppercase tracking-wider">Extra small uppercase text</p>
-        </div>
-    </section>
-
-    <!-- Colors Section -->
-    <section class="bg-white rounded-lg shadow-md p-6">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">Color Palette</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
-            <div class="bg-red-500 text-white p-4 rounded text-center font-semibold">Red</div>
-            <div class="bg-orange-500 text-white p-4 rounded text-center font-semibold">Orange</div>
-            <div class="bg-yellow-500 text-white p-4 rounded text-center font-semibold">Yellow</div>
-            <div class="bg-green-500 text-white p-4 rounded text-center font-semibold">Green</div>
-            <div class="bg-blue-500 text-white p-4 rounded text-center font-semibold">Blue</div>
-            <div class="bg-indigo-500 text-white p-4 rounded text-center font-semibold">Indigo</div>
-            <div class="bg-purple-500 text-white p-4 rounded text-center font-semibold">Purple</div>
-            <div class="bg-pink-500 text-white p-4 rounded text-center font-semibold">Pink</div>
-        </div>
-    </section>
-
-    <!-- Buttons Section -->
-    <section class="bg-white rounded-lg shadow-md p-6">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">Buttons</h2>
-        <div class="space-y-6">
-            <div>
-                <h3 class="text-lg font-semibold text-gray-700 mb-3">Basic Buttons</h3>
-                <div class="flex flex-wrap gap-3">
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        Primary
-                    </button>
-                    <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
-                        Secondary
-                    </button>
-                    <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-                        Success
-                    </button>
-                    <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-                        Danger
-                    </button>
-                </div>
-            </div>
-            <div>
-                <h3 class="text-lg font-semibold text-gray-700 mb-3">Button Sizes</h3>
-                <div class="flex flex-wrap items-center gap-3">
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded text-xs">
-                        Extra Small
-                    </button>
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded text-sm">
-                        Small
-                    </button>
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        Medium
-                    </button>
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded text-lg">
-                        Large
-                    </button>
-                </div>
-            </div>
-            <div>
-                <h3 class="text-lg font-semibold text-gray-700 mb-3">Outline Buttons</h3>
-                <div class="flex flex-wrap gap-3">
-                    <button class="border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white font-bold py-2 px-4 rounded transition-colors">
-                        Primary Outline
-                    </button>
-                    <button class="border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-white font-bold py-2 px-4 rounded transition-colors">
-                        Success Outline
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Forms Section -->
-    <section class="bg-white rounded-lg shadow-md p-6">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">Form Elements</h2>
-        <form class="space-y-6">
-            <div class="grid md:grid-cols-2 gap-6">
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-2">Text Input</label>
-                    <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter text...">
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-2">Email Input</label>
-                    <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter email...">
-                </div>
-            </div>
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">Select Dropdown</label>
-                <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                    <option>Choose an option</option>
-                    <option>Option 1</option>
-                    <option>Option 2</option>
-                    <option>Option 3</option>
-                </select>
-            </div>
-            <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2">Textarea</label>
-                <textarea class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" rows="4" placeholder="Enter your message..."></textarea>
-            </div>
-            <div class="flex items-center">
-                <input type="checkbox" class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
-                <label class="ml-2 block text-sm text-gray-900">I agree to the terms and conditions</label>
-            </div>
-        </form>
-    </section>
-
-    <!-- Cards Section -->
-    <section class="bg-white rounded-lg shadow-md p-6">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">Cards</h2>
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div class="h-48 bg-gradient-to-r from-purple-400 to-pink-400"></div>
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Card Title</h3>
-                    <p class="text-gray-600 mb-4">This is a sample card with some description text.</p>
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        Learn More
-                    </button>
-                </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div class="h-48 bg-gradient-to-r from-green-400 to-blue-400"></div>
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Another Card</h3>
-                    <p class="text-gray-600 mb-4">This card demonstrates hover effects and transitions.</p>
-                    <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-                        Get Started
-                    </button>
-                </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div class="h-48 bg-gradient-to-r from-yellow-400 to-orange-400"></div>
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Third Card</h3>
-                    <p class="text-gray-600 mb-4">Cards are great for organizing content and information.</p>
-                    <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
-                        Explore
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Alerts Section -->
-    <section class="bg-white rounded-lg shadow-md p-6">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">Alerts</h2>
-        <div class="space-y-4">
-            <div class="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded">
-                <strong>Info:</strong> This is an informational alert.
-            </div>
-            <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
-                <strong>Success:</strong> Your action was completed successfully!
-            </div>
-            <div class="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded">
-                <strong>Warning:</strong> Please review this information carefully.
-            </div>
-            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
-                <strong>Error:</strong> Something went wrong. Please try again.
-            </div>
-        </div>
-    </section>
-
-    <!-- Layout & Spacing -->
-    <section class="bg-white rounded-lg shadow-md p-6">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">Layout & Spacing</h2>
-        <div class="space-y-6">
-            <div>
-                <h3 class="text-lg font-semibold text-gray-700 mb-3">Flexbox Layout</h3>
-                <div class="flex justify-between items-center bg-gray-100 p-4 rounded">
-                    <div class="bg-blue-500 text-white p-2 rounded">Item 1</div>
-                    <div class="bg-green-500 text-white p-2 rounded">Item 2</div>
-                    <div class="bg-red-500 text-white p-2 rounded">Item 3</div>
-                </div>
-            </div>
-            <div>
-                <h3 class="text-lg font-semibold text-gray-700 mb-3">Grid Layout</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="bg-purple-500 text-white p-4 rounded text-center">1</div>
-                    <div class="bg-indigo-500 text-white p-4 rounded text-center">2</div>
-                    <div class="bg-blue-500 text-white p-4 rounded text-center">3</div>
-                    <div class="bg-green-500 text-white p-4 rounded text-center">4</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Responsive Design Test -->
-    <section class="bg-white rounded-lg shadow-md p-6">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">Responsive Design</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            <div class="bg-blue-500 text-white p-4 rounded text-center">
-                <p class="font-semibold">Responsive</p>
-                <p class="text-sm opacity-75">1 col on mobile</p>
-                <p class="text-sm opacity-75">2 cols on tablet</p>
-                <p class="text-sm opacity-75">3 cols on desktop</p>
-                <p class="text-sm opacity-75">4 cols on xl</p>
-            </div>
-            <div class="bg-green-500 text-white p-4 rounded text-center">Box 2</div>
-            <div class="bg-purple-500 text-white p-4 rounded text-center">Box 3</div>
-            <div class="bg-orange-500 text-white p-4 rounded text-center">Box 4</div>
-        </div>
-    </section>
+    @* {{-- end container --}} *@
 </div>
+@* {{-- end min-h-screen --}} *@

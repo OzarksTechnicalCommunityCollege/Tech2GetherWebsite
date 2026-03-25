@@ -1,5 +1,6 @@
 ﻿using Tech2Gether_api.Data;
 using Tech2Gether_api.IRepository;
+using Tech2Gether_api.Models;
 
 namespace Tech2Gether_api.Repository
 {
@@ -15,6 +16,7 @@ namespace Tech2Gether_api.Repository
             _config = config;
         }
 
+        #region Get All Users Method
         public List<User> GetAllUsers()
         {
             List<User> userList = new List<User>();
@@ -62,5 +64,50 @@ namespace Tech2Gether_api.Repository
             }
             return userList;
         }
+        #endregion
+
+        #region Register User method 
+        public async Task<RegisterUserResponseModel> RegisterUser(User user)
+        {
+            RegisterUserResponseModel res = new RegisterUserResponseModel();
+
+            try
+            {
+                if (user != null)
+                {
+                    User newUser = new User();
+                    newUser.Email = user.Email;
+
+                    Login newUserLogin = new Login();
+
+                    newUserLogin.PasswordHash = user.Login.PasswordHash;
+                    newUserLogin.PasswordSalt = user.Login.PasswordSalt;
+                    newUserLogin.Username = user.Email;
+
+                    newUser.Login = newUserLogin;
+
+                    _context.Users.Add(newUser);
+                    _context.Logins.Add(newUserLogin);
+                    _context.SaveChanges();
+
+                    res.Status = true;
+                    res.StatusCode = 200;
+                    res.Message = "User registered successfully";
+                    res.user = newUser;
+                }
+                else
+                {
+                    res.Status = false;
+                    res.StatusCode = 400;
+                    res.Message = "Invalid user data";
+                }
+            } catch (Exception ex)
+            {
+                throw new Exception("Error retrieving users: " + ex.Message);
+            }
+
+            return res;
+        }
+        #endregion
     }
 }
