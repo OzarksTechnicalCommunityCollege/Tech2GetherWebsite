@@ -1,0 +1,136 @@
+@* Views/Shared/_Card.cshtml *@
+
+@model Tech2Gether.Models.CardModel
+
+@{
+    var padding = Model.Size switch {
+        "sm" => "p-6",
+        "md" => "p-7",
+        _    => "p-8"
+    };
+
+    var iconSize = Model.Size switch {
+        "sm" => "w-8 h-8",
+        "md" => "w-10 h-10",
+        _    => "w-12 h-12"
+    };
+
+    var textAlign  = Model.Centered ? "text-center" : "text-left";
+    var itemsAlign = Model.Centered ? "items-center justify-center" : "items-start justify-start";
+    var iconJustify = Model.Centered ? "justify-center" : "justify-start";
+}
+
+<div id="@Model.Id"
+     class="bg-white @padding rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-t-4 @Model.BorderColor flex flex-col h-full @Model.ClassName">
+
+    @* {{-- Icon --}} *@
+    @if (!string.IsNullOrEmpty(Model.IconSvg))
+    {
+        <div class="flex @iconJustify mb-6">
+            <svg class="@iconSize @Model.IconColor" fill="currentColor" viewBox="@Model.IconViewBox" xmlns="http://www.w3.org/2000/svg">
+                @Html.Raw(Model.IconSvg)
+            </svg>
+        </div>
+    }
+
+    @* {{-- Title --}} *@
+    @if (!string.IsNullOrEmpty(Model.Title))
+    {
+        <h3 class="text-2xl font-bold mb-4 @textAlign text-binary-blue">
+            @Model.Title
+        </h3>
+    }
+
+    @* {{-- Subtitle / Badge --}} *@
+    @if (!string.IsNullOrEmpty(Model.Subtitle))
+    {
+        <div class="@textAlign mb-4">
+            <span class="@Model.SubtitleBg @Model.SubtitleText px-3 py-1 rounded-full text-sm font-semibold inline-block mb-2">
+                @Model.Subtitle
+            </span>
+        </div>
+    }
+
+    @* {{-- Details --}} *@
+    @if (Model.Details.Any())
+    {
+        <div class="space-y-2 mb-6 text-sm text-gray-600">
+            @foreach (var detail in Model.Details)
+            {
+                <div class="flex @itemsAlign gap-2">
+                    @if (!string.IsNullOrEmpty(detail.IconSvg))
+                    {
+                        <svg class="w-4 h-4 flex-shrink-0 @(detail.Color ?? Model.IconColor)" fill="currentColor"
+                             viewBox="@detail.IconViewBox" xmlns="http://www.w3.org/2000/svg">
+                            @Html.Raw(detail.IconSvg)
+                        </svg>
+                    }
+                    <span>@detail.Text</span>
+                </div>
+            }
+        </div>
+    }
+
+    @* {{-- Description --}} *@
+    @if (!string.IsNullOrEmpty(Model.Description))
+    {
+        <p class="text-gray-600 @textAlign leading-relaxed mb-6 flex-grow">
+            @Model.Description
+        </p>
+    }
+
+    @* {{-- Additional Info --}} *@
+    @if (Model.AdditionalInfo != null)
+    {
+        <div class="@Model.AdditionalInfoBg p-3 rounded-lg mb-4">
+            <p class="text-sm text-gray-700">
+                @Html.Raw(Model.AdditionalInfo)
+            </p>
+        </div>
+    }
+
+    @* {{-- Button --}} *@
+    @if (Model.Button != null)
+    {
+        <div class="@textAlign mt-auto">
+            @{
+                var btnClasses = $"w-full px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105 font-medium inline-flex items-center justify-center gap-2 {Model.Button.ClassName ?? "bg-binary-blue text-white hover:bg-analog-aquamarine"}";
+            }
+
+            @if (!string.IsNullOrEmpty(Model.Button.Href))
+            {
+                <a href="@Model.Button.Href"
+                   class="@btnClasses"
+                   @(Model.Button.External ? Html.Raw("target=\"_blank\" rel=\"noopener noreferrer\"") : Html.Raw(""))>
+                    @if (!string.IsNullOrEmpty(Model.Button.IconSvg))
+                    {
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="@Model.Button.IconViewBox" xmlns="http://www.w3.org/2000/svg">
+                            @Html.Raw(Model.Button.IconSvg)
+                        </svg>
+                    }
+                    @Model.Button.Text
+                    @if (Model.Button.External)
+                    {
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                    }
+                </a>
+            }
+            else
+            {
+                <button class="@btnClasses">
+                    @if (!string.IsNullOrEmpty(Model.Button.IconSvg))
+                    {
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="@Model.Button.IconViewBox" xmlns="http://www.w3.org/2000/svg">
+                            @Html.Raw(Model.Button.IconSvg)
+                        </svg>
+                    }
+                    @Model.Button.Text
+                </button>
+            }
+        </div>
+    }
+
+</div>

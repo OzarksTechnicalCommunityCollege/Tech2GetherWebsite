@@ -10,6 +10,27 @@
 	  <Folder Include="Views\Components\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Include="wwwroot\assets\background.png" />
+	  <None Include="wwwroot\assets\fonts\arial-nova.ttf" />
+	  <None Include="wwwroot\assets\fonts\digital-dare.ttf" />
+	  <None Include="wwwroot\assets\logo.svg" />
+	  <None Include="wwwroot\assets\portraits\diego_haro.png" />
+	  <None Include="wwwroot\assets\portraits\laura_kirkpatrick.png" />
+	  <None Include="wwwroot\assets\portraits\paul_bute.png" />
+	  <None Include="wwwroot\assets\portraits\placeholder.png" />
+	  <None Include="wwwroot\assets\portraits\willy_vanderpool.png" />
+	  <None Include="wwwroot\assets\thumbnails\3_26_25_thumbnail.png" />
+	  <None Include="wwwroot\assets\thumbnails\butterscotch.png" />
+	  <None Include="wwwroot\assets\thumbnails\git.png" />
+	  <None Include="wwwroot\assets\thumbnails\JenCollins.jpg" />
+	  <None Include="wwwroot\assets\thumbnails\linkedIn.png" />
+	  <None Include="wwwroot\assets\thumbnails\picoCTF.png" />
+	  <None Include="wwwroot\assets\thumbnails\placeholder.png" />
+	  <None Include="wwwroot\assets\thumbnails\SRC.png" />
+	  <None Include="wwwroot\assets\thumbnails\tanner.png" />
+	</ItemGroup>
+
 	<Target Name="BuildTailwind" BeforeTargets="Build">
 		<Exec Command="npm run build" />
 	</Target>
