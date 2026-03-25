@@ -1,0 +1,73 @@
+@{
+    var currentPath = "/" + Context.Request.Path.Value?.TrimStart('/');
+    var navItems = new[] {
+        new { Path = "/",         Label = "Home" },
+        new { Path = "/events",   Label = "Events" },
+        new { Path = "/sponsors", Label = "Sponsors" },
+    };
+}
+
+<header style="background-color: #00447c; border-bottom: 4px solid #FFD700;">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
+        <div class="flex items-center justify-between gap-4 min-w-0">
+
+            @* {{-- Logo --}} *@
+            <div class="flex-shrink-0">
+                <a asp-page="/Index" class="hover:opacity-80 transition-opacity">
+                    <img src="assets/logo.svg"
+                         alt="Tech2Gether Logo"
+                         class="h-12 sm:h-16 lg:h-20 w-auto max-w-none" />
+                </a>
+            </div>
+
+            @* {{-- Navigation --}} *@
+            <nav class="flex-shrink-0 min-w-0">
+                <div class="flex items-center space-x-1 sm:space-x-2 lg:space-x-4">
+
+                    @foreach (var item in navItems)
+                    {
+                        var isActive = item.Path == "/"
+                            ? currentPath == "/"
+                            : currentPath.StartsWith(item.Path, StringComparison.OrdinalIgnoreCase);
+
+                        var background = isActive
+                            ? "linear-gradient(135deg, #0E9ED5, #0B7FA8)"
+                            : "linear-gradient(135deg, #FFC90D, #FFB000)";
+
+                        var color     = isActive ? "white"   : "#00447c";
+                        var boxShadow = isActive
+                            ? "0 4px 15px rgba(14,158,213,0.3), inset 0 1px 0 rgba(255,255,255,0.2)"
+                            : "0 3px 12px rgba(255,201,13,0.25), inset 0 1px 0 rgba(255,255,255,0.3)";
+                        var textShadow = isActive
+                            ? "0 1px 2px rgba(0,0,0,0.3)"
+                            : "0 1px 2px rgba(0,0,0,0.1)";
+
+                        <a href="@item.Path"
+                           class="relative flex items-center justify-center px-2 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 font-bold transition-all duration-500 text-xs sm:text-sm lg:text-base nav-item"
+                           style="clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+                                  min-width: 60px;
+                                  background: @background;
+                                  color: @color;
+                                  box-shadow: @boxShadow;
+                                  text-shadow: @textShadow;">
+                            <span class="relative z-10 whitespace-nowrap">@item.Label</span>
+                        </a>
+                    }
+
+                </div>
+            </nav>
+
+        </div>
+    </div>
+</header>
+
+@* {{-- Hover effect via CSS since we have no JS framework --}} *@
+<style>
+    .nav-item:hover {
+        background: linear-gradient(135deg, #0E9ED5, #0B7FA8) !important;
+        color: white !important;
+        transform: scale(1.05) translateY(-2px);
+        box-shadow: 0 8px 20px rgba(14,158,213,0.4), inset 0 1px 0 rgba(255,255,255,0.3) !important;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.4) !important;
+    }
+</style>
